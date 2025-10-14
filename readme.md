@@ -33,6 +33,15 @@ The specific content is implemented in GNN-MA.py.
 
 <img src="Figure 1.png" alt="Alternative Text" width="1168" height="458">
 
+### 3.2.1 Intra-Graph Message Passing
+
+Within a single molecule, atom and bond are updated simultaneously through a cooperative convolution process (Figure 1b).
+
+**(1) Neighborhood aggregation for atoms and bonds** follows eqs **(1)** and **(2)**.
+
+**(1)**
+```math
+\ell^{(h)} = \varphi\!\left(A\,H\,W_h\right)
 
 
 **3.2.1 Intra-Graph Message Passing**
@@ -161,3 +170,4 @@ Here, $W_2,W_1, b_1$ and $b_2$ are learnable parameters, and represents the fina
 The model was trained in a supervised learning framework, Each training sample was formed by combining a ligand with either an active or a decoy compound. Binary cross-entropy loss was employed as the loss function , and model parameters were optimized using the Adam algorithm. The initial learning rate was set to ,batch size is 32, and training proceeded for 20 epochs.
 
 Since the DUD - E and LIT - PCAB datasets are organized in different ways, the codes used during training also have some differences. Among them, train.py is the code for training the model on the DUD - E dataset, and train - LIT.py is the code for training the model on the LIT - PCBA dataset. A GPU can be used during training, and a CPU can be used as a substitute on devices without a GPU.
+
