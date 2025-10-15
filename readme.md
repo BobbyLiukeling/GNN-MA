@@ -166,3 +166,4 @@ The model was trained in a supervised learning framework, Each training sample w
 Since the DUD - E and LIT - PCAB datasets are organized in different ways, the codes used during training also have some differences. Among them, train.py is the code for training the model on the DUD - E dataset, and train - LIT.py is the code for training the model on the LIT - PCBA dataset. A GPU can be used during training, and a CPU can be used as a substitute on devices without a GPU.
 
 
+
