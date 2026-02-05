@@ -33,6 +33,10 @@ The specific content is implemented in GNN-MA.py.
 
 <img src="Figure 1.png" alt="Alternative Text" width="1168" height="458">
 
+Figure 1. Overall framework of GNN-MA
+As illustrated in Fig. 1(A)–(D), GNN-MA tackles ligand-based virtual screening (LBVS) as a query–candidate pairwise scoring task. Given a query molecule Gq and a candidate molecule Gc , the model first encodes node- and edge-level features of their molecular graphs (Fig. 1A) and learns structural representations via message passing within each graph (Fig. 1B). It then applies cross-graph attention to explicitly capture atom-level and bond-level interactions between the two molecules, producing an interpretable soft alignment (Fig. 1C). Finally, the interaction-aware representations are fused and pooled to yield a matching score for ranking (Fig. 1D).
+This framework places no restriction on input dimensionality: 1D/2D information as the default set of features, while 3D-related cues are incorporated into the same unified pipeline as optional enhancements when available. To meet the demands of large-scale screening, we further benchmark inference throughput in the experimental section to characterize the scalability of the proposed approach.
+
 ### 3.2.1 Intra-Graph Message Passing
 
 Within a single molecule, atom and bond are updated simultaneously through a cooperative convolution process (Figure 1b).
@@ -164,6 +168,7 @@ Here, $W_2,W_1, b_1$ and $b_2$ are learnable parameters, and represents the fina
 The model was trained in a supervised learning framework, Each training sample was formed by combining a ligand with either an active or a decoy compound. Binary cross-entropy loss was employed as the loss function , and model parameters were optimized using the Adam algorithm. The initial learning rate was set to ,batch size is 32, and training proceeded for 20 epochs.
 
 Since the DUD - E and LIT - PCAB datasets are organized in different ways, the codes used during training also have some differences. Among them, train.py is the code for training the model on the DUD - E dataset, and train - LIT.py is the code for training the model on the LIT - PCBA dataset. A GPU can be used during training, and a CPU can be used as a substitute on devices without a GPU.
+
 
 
 
