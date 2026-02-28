@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List, Tuple
 
 # =========================
-# 配置：LIT 根目录（写死）
+# 配置：LIT 根目录
 # =========================
 ROOT = Path(r"E:\code\python\daily\Alignment\data\encode-LIT")
 EDGE_DIR_NAME = "edge_no_sidechain"
@@ -16,10 +16,10 @@ RATIO_VAL   = 0.1
 RATIO_TEST  = 0.1
 SEED = 20260227
 
-# 编码文件后缀（按你实际情况补充）
+# 编码文件后缀
 ALLOW_EXTS = {".npz", ".npy", ".pt", ".pth", ".pkl", ".pickle", ".bin"}
 
-# ===== 路径/文件名关键字识别正负（LIT 常见：active / inactive）=====
+# ===== 路径/文件名关键字识别正负
 POS_KEYS = ("active", "actives", "pos", "positive")
 NEG_KEYS = ("inactive", "inactives", "neg", "negative", "decoy", "decoys")
 
@@ -239,4 +239,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
