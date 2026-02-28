@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Tuple
 
 # =========================
-# 配置：按你的路径写死
+# 配置
 # =========================
 ROOT = Path(r"E:\code\python\daily\Alignment\data\encode")
 EDGE_DIR_NAME = "edge_no_sidechain"
@@ -17,10 +17,10 @@ RATIO_VAL   = 0.1
 RATIO_TEST  = 0.1
 SEED = 20260227
 
-# 你编码文件可能是 npz / pkl / pt / npy / pickle / bin 等
+
 ALLOW_EXTS = {".npz", ".npy", ".pt", ".pth", ".pkl", ".pickle", ".bin"}
 
-# 用路径关键词识别正负（可按你的数据结构增删关键词）
+# 用路径关键词识别正负
 POS_KEYS = ("active", "actives", "pos", "positive")
 NEG_KEYS = ("decoy", "decoys", "inactive", "inactives", "neg", "negative")
 
@@ -256,4 +256,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
