@@ -111,6 +111,12 @@ This repository focuses on 2D molecular graph inputs (topology + atom/bond attri
 
 ---
 
-## 7. Contact
+## 7. Pretrained Checkpoints
+Pretrained checkpoints used in this study are provided in the repository (or release assets). They can be used for direct evaluation without retraining.
+Users may either reproduce the results from scratch using the provided scripts or directly evaluate the released checkpoints.
+
+---
+
+## 8. Contact
 
 For questions, please open a GitHub issue or contact the authors via the email addresses listed in the manuscript.
